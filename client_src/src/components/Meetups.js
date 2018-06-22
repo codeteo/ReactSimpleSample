@@ -23,9 +23,17 @@ class Meetups extends Component {
     }
 
     render(){
+        const meetupItems = this.state.meetups.map((meetup, i) => {
+            return(
+                <li>{meetup.name}</li>
+            )
+        })
         return (
             <div>
                 <h1>Meetups</h1>
+                <ul>
+                    {meetupItems}
+                </ul>
             </div>
         )
     }
